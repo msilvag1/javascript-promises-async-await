@@ -1,5 +1,5 @@
 import {
-  fetchTimeOut,
+  fetchwithTimeOut,
   fetchMovies,
   fetchBooks,
   asyncFetchBooks,
