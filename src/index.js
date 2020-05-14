@@ -1,6 +1,6 @@
 import { fetchMovies, fetchBooks } from './services';
 
-const getBooksAndMovies = () => {
+function getBooksAndMovies () {
   return Promise.all([fetchBooks(), fetchMovies()])
     .then(([books, movies]) => ({
       books,
@@ -15,7 +15,7 @@ getBooksAndMoviesPromise.then((results) => {
   console.log('getBooksAndMoviesPromise', results);
 });
 
-const getBooksOrMovies = () => {
+function getBooksOrMovies () {
   return Promise.race([fetchBooks(), fetchMovies()])
     .then((results) => results)
     .catch((error) => console.log("Error waiting for the promise race", error));
