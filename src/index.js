@@ -7,7 +7,7 @@ import {
 } from "./services";
 const movies = require("./data/movies.json");
 
-function getBooksAndMovies() {
+const getBooksAndMovies = () => {
   return Promise.all([fetchBooks(), fetchMovies()])
     .then(([books, movies]) => ({
       books,
